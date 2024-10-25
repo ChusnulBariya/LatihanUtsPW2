@@ -53,7 +53,11 @@ class KucingController extends Controller
      */
     public function show(Kucing $kucing)
     {
-        //
+        $fakultas = Kucing::find($kucing);
+        $data['success'] = true;
+        $data['message'] = "Detail data fakultas";
+        $data['result'] = $fakultas;
+        return response()->json($data, Response::HTTP_OK);
     }
 
     /**
