@@ -12,3 +12,4 @@ route::get('/kucing', [KucingController::class, 'index']);
 Route::post('/kucing',[KucingController::class, 'store']);
 Route::patch('/kucing/{kucing}',[KucingController::class, 'update']);
 Route::delete('/kucing/{kucing}',[KucingController::class, 'destroy']);
+Route::get('/kucing/{kucing}',[KucingController::class, 'show']);
